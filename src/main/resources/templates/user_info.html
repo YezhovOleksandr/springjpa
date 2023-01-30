@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<h1 style="text-align: center">User info</h1>
+<div>
+  <span><img width="200" height="200" th:src="@{/images/{avatar}(avatar = ${user.avatar})}" alt="avatar"> </span>
+  <h3 th:text="${user.firstName} + ${user.lastName}"></h3>
+  <b>Email : </b> <span th:text="${user.email}"></span>
+</div>
+</body>
+</html>
